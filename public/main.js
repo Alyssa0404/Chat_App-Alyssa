@@ -17,4 +17,35 @@ socket.on('message', (message) => {
     })
     msg.insertAdjacentHTML('beforeend', html)
 })
+socket.on('dataRoom', ({ room, users }) => {
+    const html = Mustache.render(sidebarTemplate, {
+        room,
+        users
+    })
+    document.querySelector('.sidebar').innerHTML = html
+})
+
+msgForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+    msgFormBtn.setAttribute('disabled', 'disabled')
+    const message = msgFormInput.value
+
+    socket.emit('sendMessage', message, error => {
+        msgFormBtn.removeAttribute('disabled')
+        msgFormInput.value = ''
+        msgFormInput.focus()
+
+        if (error) {
+            return console.log(error)
+        }
+        console.log('Message delivered!')
+    })
+})
+
+socket.emit('join', { username, room }, (error) => {
+    if (error) {
+        alert(error)
+        location.href = '/'
+    }
+})
 
