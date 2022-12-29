@@ -41,7 +41,7 @@ input {
 button {
     cursor: pointer;
     padding: 12px;
-    background: #363d9e;
+    background: #960552;
     border: none;
     color: white;
     font-size: 16px;
@@ -49,12 +49,12 @@ button {
 }
 
 button:hover {
-    background: #6b47b8;
+    background: #c2206b;
 }
 
 button:disabled {
     cursor: default;
-    background: #7c5cbf94;
+    background: #ec3393d3;
 }
 
 /* Chat Page Layout */
@@ -66,7 +66,7 @@ button:disabled {
 .sidebar {
     height: 100vh;
     color: rgb(36, 32, 32);
-    background: #aab473;
+    background: #895883;
     width: 225px;
     overflow-y: scroll
 }
@@ -104,7 +104,7 @@ button:disabled {
 }
 
 .message a {
-    color: #0070CC;
+    color: #9f2d48;
 }
 
 /* Message Composition Styles */
@@ -137,7 +137,7 @@ button:disabled {
 /* Join Page Styles */
 
 .join-form {
-    background: #aab473;
+    background: #924f68;
     width: 100vw;
     height: 100vh;   
     display: flex;
@@ -167,7 +167,7 @@ button:disabled {
 .room-title {
     font-weight: 400;
     font-size: 22px;
-    background: #1507e0;
+    background: #62104f;
     color: #fff;
     padding: 24px;   
 }
